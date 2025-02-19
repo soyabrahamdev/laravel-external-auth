@@ -49,18 +49,20 @@ POST /api/login
 GET /api/user -> with Auth Bearer Token
 POST /api/logout -> with Auth Bearer Token
 ```
-_Como apoyo, se suben el archivo postman para su ejecución y pruebas_
+_Como apoyo, se suben el archivo postman para su ejecución y pruebas, archivos dentro de la carpeta `postman`_
 
 ## Instrucciones Prod
 
-1. Aplicar los cambios en el archivo `.env`:
+1. Borrar carpeta `postman` antes de publicar.
+
+2. Aplicar los cambios en el archivo `.env`:
     - `APP_ENV=production`
     - `APP_DEBUG=false`
 
-2. Optimizar el Composer Autoloader: 
+3. Optimizar el Composer Autoloader: 
     - `composer dump-autoload --optimize`
 
-3. Optimizar Laravel (**No usar durante desarrollo/dev**):
+4. Optimizar Laravel (**No usar durante desarrollo/dev**):
     - `php artisan config:cache`
     - `php artisan route:cache`
     - `php artisan view:cache`
